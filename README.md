@@ -3,7 +3,7 @@ A collection of my web development projects built using HTML, CSS, and JavaScrip
 
 # 📂 Project Structure
 
-JS-Mini-Projects/
+JS-Mini-Projects
 │
 ├── Fitness Tracker/
 │   ├── index.html

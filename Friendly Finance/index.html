@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>₹Paise Planner</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Paise Planner </a></li>
+          <li><a href="converter.html">Kurrency Konverter</a></li>
+          <li><a href="discount-cal.html">Discount Deducer</a></li>
+          <li><a href="bill-splitter.html">Bill Batwara</a></li>
+        </ul>
+      </nav>
+      <hgroup>
+        <h1>₹Paise Planner</h1>
+        <p>plan your savings better</p>
+      </hgroup>
+    </header>
+    <main class="container">
+      <section>
+        <p>
+          Set your total goal, timeline and current savings to see how much you
+          need to save each month.
+        </p>
+        <div>
+          <input
+            placeholder="Total goal amount"
+            type="number"
+            id="total"
+            required
+          />
 
+          <input
+            placeholder="Number of months"
+            type="number"
+            id="months"
+            required
+          />
+
+          <input
+            placeholder="Currently saved"
+            type="number"
+            id="current"
+            required
+          />
+
+          <button id="calculateBtn" type="button">
+            How much do I need to save per month?
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <p id="result"></p>
+      </section>
+    </main>
+    <footer class="container neog-footer">
+      <small>
+        go from zero to hero at full stack development with
+        <a href="https://neog.camp">neog.camp</a>
+      </small>
+    </footer>
+
+    <script>
+      const calculateBtn = document.getElementById("calculateBtn");
+
+      function calculateRequiredSavings(total, months, current) {
+        const remaining = total - current;
+        const requiredSavingsPerMonth = remaining / months;
+        return requiredSavingsPerMonth.toFixed(2);
+      }
+
+      function handleButtonClick() {
+        const totalInputElement = document.getElementById("total");
+        const monthInputElement = document.getElementById("months");
+        const currentInputElement = document.getElementById("current");
+        const resultElement = document.getElementById("result");
+
+        const total = totalInputElement.value;
+        const months = monthInputElement.value;
+        const current = currentInputElement.value;
+        const requiredSavings = calculateRequiredSavings(
+          total,
+          months,
+          current
+        );
+
+        resultElement.innerText =
+          "You need to save Rs: " + requiredSavings + " per month";
+      }
+
+      calculateBtn.addEventListener("click", handleButtonClick);
+    </script>
+  </body>
+</html>

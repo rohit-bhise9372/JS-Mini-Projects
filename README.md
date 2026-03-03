@@ -42,3 +42,11 @@ JS-Mini-Projects
 │
 └── README.md 
 
+
+Fitness-Tracker/
+│
+├── index.html
+├── cal-calculator.html
+├── water-watcher.html
+├── step-sankhya.html
+├── styles.css

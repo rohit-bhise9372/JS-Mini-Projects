@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src = "index.js"> </script>
   </head>
   <body>
     <header class="container">
@@ -70,35 +71,6 @@
       </small>
     </footer>
 
-    <script>
-      const calculateBtn = document.getElementById("calculateBtn");
-
-      function calculateRequiredSavings(total, months, current) {
-        const remaining = total - current;
-        const requiredSavingsPerMonth = remaining / months;
-        return requiredSavingsPerMonth.toFixed(2);
-      }
-
-      function handleButtonClick() {
-        const totalInputElement = document.getElementById("total");
-        const monthInputElement = document.getElementById("months");
-        const currentInputElement = document.getElementById("current");
-        const resultElement = document.getElementById("result");
-
-        const total = totalInputElement.value;
-        const months = monthInputElement.value;
-        const current = currentInputElement.value;
-        const requiredSavings = calculateRequiredSavings(
-          total,
-          months,
-          current
-        );
-
-        resultElement.innerText =
-          "You need to save Rs: " + requiredSavings + " per month";
-      }
-
-      calculateBtn.addEventListener("click", handleButtonClick);
-    </script>
+    
   </body>
 </html>

@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src = "discount-cal.js> </script>
   </head>
   <body>
     <header class="container">
@@ -54,42 +55,6 @@
       </small>
     </footer>
 
-    <script>
-      const calculateBtn = document.getElementById("calculateBtn");
-
-      function calculateFinalDiscount(total, discountPercentage) {
-        const savedAmount = (total * discountPercentage) / 100;
-        const finalPrice = total - savedAmount;
-        return {
-          savedAmount: savedAmount.toFixed(2),
-          finalPrice: finalPrice.toFixed(2),
-        };
-      }
-      function processDiscount() {
-        const totalInputAmount = document.getElementById("inputAmount");
-        const totaldiscountAmount = document.getElementById("inputDiscount");
-        const resultElement = document.getElementById("result");
-
-        const total = Number(totalInputAmount.value);
-        const discountPercentage = Number(totaldiscountAmount.value);
-
-        const requiredDiscount = calculateFinalDiscount(
-          total,
-          discountPercentage
-        );
-
-        resultElement.innerText =
-          "You saved " +
-          "\u20B9" +
-          requiredDiscount.savedAmount +
-          "." +
-          " Final price is " +
-          "\u20B9" +
-          requiredDiscount.finalPrice +
-          ".";
-      }
-
-      calculateBtn.addEventListener("click", processDiscount);
-    </script>
   </body>
 </html>
+

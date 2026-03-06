@@ -19,9 +19,13 @@ JS-Mini-Projects/
 │   └── README.md
 ├── Friendly Finance/
 │   ├── index.html
+│   ├── index.js
 │   ├── bill-splitter.html
+│   ├── bill-splitter.js
 │   ├── converter.html
+│   ├── converter.js
 │   ├── discount-cal.html
+│   ├── discount-cal.js
 │   ├── styles.css
 │   └── README.md
 ├── Smart Marketer/
